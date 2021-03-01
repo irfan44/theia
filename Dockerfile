@@ -1,12 +1,12 @@
 ARG NODE_VERSION=12.18.3
-FROM node:${NODE_VERSION}-buster-slim
+FROM node:${NODE_VERSION}-alpine
 
 ARG version=latest
 
 WORKDIR /home/theia
 
 ADD $version.package.json ./package.json
-RUN apt-get update && apt-get install -y --no-install-recommends python make pkg-config libx11-dev libxkbfile-dev g++ gcc
+RUN apk add --no-cache make pkgconfig gcc g++ python libx11-dev libxkbfile-dev
 
 ARG GITHUB_TOKEN
 RUN yarn --pure-lockfile && \
