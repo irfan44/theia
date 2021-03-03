@@ -21,6 +21,9 @@ RUN yarn --pure-lockfile && \
     yarn cache clean
 
 FROM node:${NODE_VERSION}-buster-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends git sudo
+
 # See : https://github.com/theia-ide/theia-apps/issues/34
 RUN adduser --disabled-password --gecos '' theia&& \
     adduser theia sudo && \
@@ -30,8 +33,6 @@ RUN chmod g+rw /home && \
     mkdir -p /home/project && \
     chown -R theia:theia /home/theia && \
     chown -R theia:theia /home/project;
-
-RUN apt-get update && apt-get install -y --no-install-recommends git sudo
 
 ENV HOME /home/theia
 WORKDIR /home/theia
