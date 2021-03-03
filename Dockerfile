@@ -31,7 +31,7 @@ RUN chmod g+rw /home && \
     chown -R theia:theia /home/theia && \
     chown -R theia:theia /home/project;
 
-RUN apt-get update && apt-get install -y --no-install-recommends git
+RUN apt-get update && apt-get install -y --no-install-recommends git sudo
 
 ENV HOME /home/theia
 WORKDIR /home/theia
