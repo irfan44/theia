@@ -62,6 +62,7 @@
         "vsjava-java-test" : "https://open-vsx.org/api/vscjava/vscode-java-test/0.28.0/file/vscjava.vscode-java-test-0.28.0.vsix",
         "vsjava-maven": "https://open-vsx.org/api/vscjava/vscode-maven/0.21.2/file/vscjava.vscode-maven-0.21.2.vsix",
         "vsjava-debug": "https://open-vsx.org/api/vscjava/vscode-java-debug/0.31.0/file/vscjava.vscode-java-debug-0.31.0.vsix",
+        "kotlin": "https://open-vsx.org/api/fwcd/kotlin/0.2.22/file/fwcd.kotlin-0.2.22.vsix",
         "nord-theme" : "https://open-vsx.org/api/arcticicestudio/nord-visual-studio-code/0.15.0/file/arcticicestudio.nord-visual-studio-code-0.15.0.vsix"
     }
 }
